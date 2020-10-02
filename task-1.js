@@ -1,24 +1,9 @@
-// Write code under this line
-const addIndex = (element, index) => element + index;
-// Write code under this line
-const subIndex = (element, index) => element - index;
+const listRef = document.getElementById('categories');
 
-function mapArray(array, cb) {
-  'use strict';
-  // Write code under this line
-  const numbers = new Array(array.length);
-  for (let i = 0; i < array.length; i += 1) {
-    const element = array[i];
-    const index = i;
-    numbers[i] = cb(element, index);
-  }
-  return numbers;
-}
+console.log(`В списке ${listRef.children.length} категории.`);
 
-const arr = [1, 2, 3, 4, 5];
-
-console.log(mapArray(arr, addIndex));
-// [1, 3, 5, 7, 9]
-
-console.log(mapArray(arr, subIndex));
-// [1, 1, 1, 1, 1]
+const liItems = listRef.querySelectorAll('li.item');
+liItems.forEach(({ children }) =>
+  console.log(`Категория: ${children[0].textContent}\n
+  Количество элементов: ${children[1].children.length}`),
+);
