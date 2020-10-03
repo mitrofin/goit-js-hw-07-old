@@ -1,34 +1,19 @@
-const add = (accum, element) => accum + element;
-const mult = (accum, element) => accum * element;
-const sub = (accum, element) => accum - element;
+const images = [
+  {
+    url:
+      'https://images.pexels.com/photos/140134/pexels-photo-140134.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+    alt: 'White and Black Long Fur Cat',
+  },
+  {
+    url:
+      'https://images.pexels.com/photos/213399/pexels-photo-213399.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+    alt: 'Orange and White Koi Fish Near Yellow Koi Fish',
+  },
+  {
+    url:
+      'https://images.pexels.com/photos/219943/pexels-photo-219943.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+    alt: 'Group of Horses Running',
+  },
+];
 
-function reduceArray(array, cb, initial) {
-  'use strict';
-  let i;
-  let accum;
-  if (arguments.length >= 3) {
-    accum = initial;
-    i = 0;
-  }
-  if (arguments.length === 2) {
-    accum = array[0];
-    i = 1;
-  }
-  for (i; i < array.length; i += 1) {
-    const element = array[i];
-    // Write code under this line
-    accum = cb(accum, element);
-  }
-  return accum;
-}
-
-const arr = [1, 2, 3, 4, 5];
-
-console.log(reduceArray(arr, add)); // 15
-console.log(reduceArray(arr, add, 10)); // 25
-
-console.log(reduceArray(arr, mult)); // 120
-console.log(reduceArray(arr, mult, 10)); // 1200
-
-console.log(reduceArray(arr, sub)); // -13
-console.log(reduceArray(arr, sub, 10)); // -5
+const galleryRef = document.getElementById('gallery');
