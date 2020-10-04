@@ -17,3 +17,21 @@ const images = [
 ];
 
 const galleryRef = document.getElementById('gallery');
+
+/* let makeItemGallery = options => {
+  const { url, alt } = options;
+  return `<li><img scr ="${url}"alt="${alt}"class=itemStyle><li>`;
+};
+
+makeItemGallery = images.map(makeItemGallery).join(''); */
+
+/* console.log(makeItemGallery); */
+
+/* galleryRef.insertAdjacentHTML('afterbegin', makeItemGallery); */
+
+images.forEach(el =>
+  galleryRef.insertAdjacentHTML(
+    'beforeend',
+    `<li class=itemStyle><img src="${el.url}" alt="${el.alt}"></li>`,
+  ),
+);
