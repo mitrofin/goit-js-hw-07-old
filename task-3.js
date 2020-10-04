@@ -20,7 +20,7 @@ const galleryRef = document.getElementById('gallery');
 
 /* let makeItemGallery = options => {
   const { url, alt } = options;
-  return `<li><img scr ="${url}"alt="${alt}"class=itemStyle><li>`;
+  return `<li><img srс ="${url}"alt="${alt}"class=itemStyle><li>`;
 };
 
 makeItemGallery = images.map(makeItemGallery).join(''); */
