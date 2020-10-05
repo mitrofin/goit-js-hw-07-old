@@ -18,20 +18,18 @@ const images = [
 
 const galleryRef = document.getElementById('gallery');
 
-/* let makeItemGallery = options => {
-  const { url, alt } = options;
-  return `<li><img srс ="${url}"alt="${alt}"class=itemStyle><li>`;
+const makeItemGallery = ({ url, alt }) => {
+  return `<li class=itemStyle><img src ="${url}"alt = "${alt}"/></li>`;
 };
+const makeItemsGallery = images.map(makeItemGallery).join('');
 
-makeItemGallery = images.map(makeItemGallery).join(''); */
+galleryRef.insertAdjacentHTML('beforeend', makeItemsGallery);
 
-/* console.log(makeItemGallery); */
-
-/* galleryRef.insertAdjacentHTML('afterbegin', makeItemGallery); */
-
-images.forEach(el =>
+/* images.forEach(el =>
   galleryRef.insertAdjacentHTML(
     'beforeend',
     `<li class=itemStyle><img src="${el.url}" alt="${el.alt}"></li>`,
   ),
-);
+); */
+
+/* console.log(makeItemGallery); */
